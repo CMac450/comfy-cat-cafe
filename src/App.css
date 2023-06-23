@@ -1,0 +1,339 @@
+.app {
+  letter-spacing: 1.5px;
+  font-family: "Haltn", sans-serif;
+  line-height: 1.7;
+}
+
+.button {
+
+  background-color: #ffceacff;
+  border-style: solid;
+  border-color: #ffceacff;
+  padding: 12px;
+  color: #242424; /*or 92440d?*/
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 10px;
+}
+
+.button:hover {
+  color: #242424;
+  background-color: #ffddc4; 
+  border-color: #ffddc4;
+}
+
+.btn-checkout {
+  color: #242424;
+  text-decoration: none;
+}
+
+.btn-cancel {
+  background-color: #e4e4e4 !important;
+  border-color: #e4e4e4;
+}
+
+.btn-cancel:hover {
+  background-color: #cfcece !important;
+  border-color: #cfcece;
+}
+
+.btn-checkout-back {
+  width: 101px;
+}
+
+.btn-checkout-back{
+  background-color: #eeecec;
+  border-color: #eeecec;
+  color: #242424;
+}
+
+.btn-checkout-continue:disabled, .btn-checkout-back:disabled {
+  opacity: .2;
+}
+
+.checkout-buttons-group {
+  margin: 0 auto;
+}
+
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
+  border-color: #242424 !important;
+}
+
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover{
+  background: #242424 !important;
+}
+
+.body {
+  display: flex;
+}
+
+
+/***********************************************************START calendar component************************************************/
+.p-datepicker table td.p-datepicker-today > span {
+  color: #242424 !important;
+  border: solid;
+  border-color: #ced4da !important;
+  border-width: 3px !important;
+}
+
+.p-highlight:not(.p-steps-item) {
+  background-color: #fcefe6 !important;
+  color: #242424 !important;
+}
+
+.p-datepicker:not(.p-disabled) table td span:not(.p-highlight):not(.p-disabled):hover {
+  background-color: #ffddc4!important;
+}
+
+.p-datepicker table td > span:focus {
+  box-shadow: none !important;
+}
+
+.p-datepicker table td > span:active:focus {
+  box-shadow: none !important;
+}
+
+.p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-year, .p-datepicker-month{
+  color: #242424 !important;
+}
+
+.p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-year:enabled:hover, .p-datepicker-month:enabled:hover {
+  text-decoration: underline #ffceacff solid 3px;
+}
+
+.p-datepicker .p-datepicker-header .p-datepicker-next:focus {
+  box-shadow: none !important;
+}
+
+/*************************************************END calendar component*************************************************/
+
+.cart-total {
+  display: inline !important;
+  font-size: 17px;
+}
+
+.cart-total .cart-total-left {
+  float: left !important;
+
+}
+
+.cart-total .cart-total-right {
+  float: right !important;
+}
+
+/*Toast messages*/
+.p-toast:not(.toast-success) {
+  opacity: 1 !important;
+}
+
+.p-toast-message .border-none .p-toast-message-enter-done {
+  margin-bottom: 0px;
+}
+
+.checkout {
+  margin-bottom: 100px;
+}
+
+/****************START CHECKOUT***********************/
+.p-steps .p-steps-item.p-highlight .p-steps-number {
+  background: #ffceacff !important;
+  color: #242424 !important;
+}
+
+.p-steps {
+  margin-top: 50px !important;
+}
+
+/********************END CHECKOUT********************************/
+
+
+
+/****************************************************START menu page*************************************************************/
+
+.menu .row {
+  /*Use this if NOT using Row's grid column props to control # cards per row*/
+  margin: 0 auto;
+}
+/********************************************END menu page***************************************************/
+
+
+
+/**************************************************START resident cats page**********************************/
+
+.resident-cats .row {
+  margin: 0 auto;
+}
+
+/****************************************************END resident cats page************************************************/
+
+
+
+/*START menu page*/
+.menu {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+/*END menu page*/
+
+/********************************************************BEGIN button and input CSS********************************************/
+.secondary-button {
+  background-color: #ffffff !important;
+  color: #242424 !important;
+  border-width: 2px !important;
+  margin-left: 5px !important;
+}
+
+button.p-inputnumber-button {
+  color: #242424;
+  background-color: #ffceacff; /*ffe87e    FEB41C*/ 
+  border-color: #ffceacff;
+}
+
+.p-button {
+  border-width: 2px !important;
+}
+
+/*set css for + and - buttons on hover. Override theme*/
+.p-button:enabled:hover, .p-button:not(button):not(a) {
+  color: #242424 !important;
+  background-color: #ffddc4 !important; /*ffe87e    FEB41C*/ /*6/12/23 from ffe87e to rgb(255, 221, 196)*/
+  border-color: #ffddc4 !important;
+}
+
+/*set css for counter inputs on hover. Override theme*/
+.p-inputtext:enabled:hover {
+  border-color: #ffddc4 !important;
+}
+
+/*set css for counter inputs on focus. Override theme*/
+.p-inputtext:enabled:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.2rem #ffe9da !important; /*f8f3b1 dedfd1*/
+  border-color: #ffceacff !important;
+}
+
+/*set css for ddl inputs on hover. Override theme*/
+.p-dropdown:not(.p-disabled):hover {
+  border-color: #ffceacff !important;
+}
+
+button.p-button {
+  border: 1px solid #ffceacff; /*6/12/23 changing from ffe87e to ffceacff*/
+}
+/*******************************************END button and input CSS****************************************************/
+
+/*******************START BOOK SESSION***********************/
+.p-calendar.p-invalid.p-component {
+  border-color: #e24c4c !important;
+}
+
+/*******************************************************START card CSS******************************************************/
+/*set height for cat card content*/
+.cat-cards .p-card-content {
+  height: 200px;
+}
+
+.bakery-cards .p-card-content {
+  height: 300px;
+}
+
+.coffee-cards .p-card-content {
+  height: 500px;
+}
+
+.p-card-content .item-description  {
+  height: 50%;
+}
+
+.coffee-cards .p-card-content .item-description {
+  height: 30%;
+}
+
+.p-card-content .flavor-ddl:not(.smoothie-cards) {
+  height: 20%;
+  margin-top: 10px;
+}
+
+.p-card-content .size-ddl:not(.smoothie-cards) {
+  height: 20%;
+  margin-top: 10px;
+}
+
+.coffee-cards .p-card-content .size-ddl {
+  height: 15%;
+  margin-top: 10px;
+}
+.coffee-cards .p-card-content .milk-ddl {
+  height: 15%;
+  margin-top: 10px;
+}
+
+.coffee-cards .p-card-content .temp-ddl {
+  height: 15%;
+  margin-top: 10px;
+}
+
+
+.p-card-content .counter:not(.smoothie-cards) {
+  height: 20%;
+  margin-top: 25px;
+}
+
+.smoothie-cards .p-card-content {
+  height: 400px;
+}
+
+.smoothie-cards .p-card-content .item-description {
+  height: 30%;
+}
+
+.smoothie-cards .p-card-content .flavor-ddl{
+  height: 20%;
+}
+
+.smoothie-cards .p-card-content .size-ddl{
+  height: 20%;
+}
+
+.smoothie-cards .p-card-content .counter {
+  height: 20%;
+}
+
+.menu-card .p-card-footer {
+  height: 100px;
+}
+
+
+.size-ddl .p-dropdown{
+  width: 100% !important;
+  text-align: center;
+}
+
+.flavor-ddl .p-dropdown {
+  width: 100% !important;
+  text-align: center; 
+}
+
+.milk-ddl .p-dropdown {
+  width: 100% !important;
+  text-align: center; 
+}
+
+.temp-ddl .p-dropdown {
+  width: 100% !important;
+  text-align: center; 
+}
+/**********************************************END card CSS*********************************************************/
+
+
+
+/********************************************START Checkout CSS*********************************************/
+
+.order-details{
+  width: 50%;
+  margin: 0 auto;
+  height: 500px;
+}

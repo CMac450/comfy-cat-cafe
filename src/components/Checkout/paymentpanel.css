@@ -1,0 +1,40 @@
+.payment-details {
+    width: 80dvw;
+    margin: 0 auto;
+    height: 500px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .show-on-large-screens {
+        display: none;
+    }
+
+    #credit-card-icons {
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+    .show-on-small-screens {
+        display: none;
+    }
+
+    .credit-card-icon-row {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #credit-card-icons {
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50dvw;
+    }
+
+}

@@ -1,0 +1,35 @@
+@media screen and (max-width: 500px) {
+  .billing-details {
+      width: 80%;
+      margin: 0 auto;
+      height: 500px;
+    }
+}
+
+@media screen and (max-width: 699px) {
+  .billing-details {
+      width: 80%;
+      margin: 0 auto;
+      height: 500px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+  .billing-details {
+      width: 70%;
+      margin: 0 auto;
+      height: 500px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+.show-on-large-screens {
+  display: none;
+}
+}
+
+@media screen and (min-width: 768px) {
+.show-on-small-screens {
+  display: none;
+}
+}

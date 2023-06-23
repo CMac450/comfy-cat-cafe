@@ -1,0 +1,10 @@
+.cat-card-button {
+    background-color: #ffe87e;
+    /* border-style: solid; */
+    border-color: #ffe87e;
+    padding: 12px;
+    color: #242424;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }

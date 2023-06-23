@@ -1,0 +1,36 @@
+.footer {
+    background-color: #fae6d8; /*fae6d8 or ffceacff*/
+    color: #7e4e2d
+}
+
+@media screen and (min-width: 1000px) {
+    div[class='footer-info'] {
+        display: flex;
+        flex-direction: row;
+    }
+
+    div[class='footer-info'] h3 {
+        text-decoration: underline;
+    }
+
+    div[class='footer-info-section'] {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    div[class='footer-info'] {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    div[class='footer-info'] h3 {
+        text-decoration: underline;
+    }
+
+    div[class='footer-info-section'] {
+        margin: 15px auto;
+    }
+}

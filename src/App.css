@@ -1,7 +1,13 @@
 .app {
   letter-spacing: 1.5px;
-  font-family: "Haltn", sans-serif;
+  /* font-family: "Haltn", sans-serif; */
+  font-family: "DM Sans";
   line-height: 1.7;
+}
+
+.app p {
+  font-weight: 400;
+  color: #4B555E; /*768391*/
 }
 
 .button {

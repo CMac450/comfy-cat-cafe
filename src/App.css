@@ -5,9 +5,17 @@
   line-height: 1.7;
 }
 
+.app:not(.nav-menu) {
+  margin-top: 50px;
+}
+
 .app p {
   font-weight: 400;
   color: #4B555E; /*768391*/
+}
+
+.p-component {
+  font-family: "DM Sans"  !important;
 }
 
 .button {
@@ -20,7 +28,7 @@
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 1px;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 .button:hover {

@@ -12,9 +12,9 @@ export class Footer extends React.Component {
                         <div className='footer-info-section'>
                             <h3>Find us at</h3>
                             <p >
-                                1234 Cherry St, Atlanta GA 31215 <br />
-                                478-123-4567 <br />
-                                talktous@comfycatcafeandbakery.com <br />
+                                3126 College Street, Atlanta GA 30309 <br />
+                                (404)-202-2668 <br />
+                                comfycatcafe&bakery@gmail.com <br />
                             </p>
                         </div>
                         <div className='footer-info-section'>

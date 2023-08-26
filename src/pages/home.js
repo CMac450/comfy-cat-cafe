@@ -1,14 +1,30 @@
 import React from 'react';
 import '../pages/home.css';
 import { TbGenderFemale } from 'react-icons/tb';
+import anime from 'animejs/lib/anime.es.js';
 
 const Home = () => {
     let PaprikaImg = 'images/cats/paprika.jpg'
 
+
+    //let interval = setInterval(frame, 5);
+
+    // const frame = () => {
+    //     ///if scroll position for images reaches end, go back to beginning
+    // }
+
+    anime({
+        targets: '.scroll-container-img',
+        direction: 'normal',
+        // translateX: 270,
+        loop: true,
+        easing: 'easeInOutSine'
+    })
+
     return (
-        <div className='' >
-            <div style={{ display: 'flex', flexDirection: 'row' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', width: '500px', margin: '0 auto', justifyContent: 'center' }}>
+        <div className='home' >
+            <div className='s1'>
+                <div className='s1-r1'>
                     <h1 style={{ fontWeight: '700' }}>Bringing together the best of both worlds: cats and pastries</h1>
                     <p>
                         Paw a freshly baked pastry, swipe your freshly brewed coffee from the counter, and pad over to one of our comfy, fluffy couches to
@@ -19,12 +35,40 @@ const Home = () => {
                 </div>
                 <img src='cat-and-coffee.jpg'
                     alt='A large furry black cat standing on a table with two coffee cups beside it'
-                    className=''
+                    className='cat-coffee-img'
                     loading='lazy'
-                    height={600}
-                    style={{ objectFit: 'fill' }}
+                    style={{ objectFit: 'fill', height: 'auto', width: 'auto' }}
                 />
             </div>
+
+            {/* <div className='paw-print-divider col-12' >
+                <img src='CatPaw1.svg' alt='A peach colored cat paw, the first in a row.' className='cat-paw-image' loading='lazy' width={100} height={100} />
+                <img src='CatPaw1.svg' alt='A peach colored cat paw, the second in a row.' className='cat-paw-image' id='hide-on-extra-small-screens' loading='lazy' width={100} height={100} />
+                <img src='CatPaw1.svg' alt='A peach colored cat paw, the third in a row.' className='cat-paw-image' id='hide-on-small-screens' loading='lazy' width={100} height={100} />
+            </div> */}
+
+            {/*eventual goal is to animate this to scroll automatically and repeat when it gets to the end. need to loop through /images/cats somehow
+                maybe get a list of all file names in the directory and then map the array to img element.
+            */}
+
+            {/* <div className='scroll-container' style={{ height: '420px' }}>
+                <img src="/images/cats/perry.jpg" style={{ objectFit: 'scale-down', height: '400px' }} className='scroll-container-img'/>
+                <img src="/images/cats/moon.jpg" style={{ objectFit: 'scale-down', height: '400px' }} className='scroll-container-img'/>
+                <img src="/images/cats/moon3.jpg" style={{ objectFit: 'scale-down', height: '400px' }} className='scroll-container-img'/>
+                <img src="/images/cats/neo2.jpg" style={{ objectFit: 'scale-down', height: '400px' }} className='scroll-container-img'/>
+                <img src="/images/cats/freddie.jpg" style={{ objectFit: 'scale-down', height: '400px' }} className='scroll-container-img'/>
+                <img src="/images/cats/basil.jpg" style={{ objectFit: 'scale-down', height: '400px' }} className='scroll-container-img'/>
+                <img src="/images/cats/pexels-erik-mclean-4876537.jpg" style={{ objectFit: 'scale-down', height: '400px' }} className='scroll-container-img'/>
+                <img src="/images/cats/pexels-joão-jesus-4198370.jpg" style={{ objectFit: 'scale-down', height: '400px' }} className='scroll-container-img'/>
+                <img src="/images/cats/thunder2.jpg" style={{ objectFit: 'scale-down', height: '400px' }} className='scroll-container-img'/>
+                <img src="/images/cats/pexels-david-yu-10914515.jpg" style={{ objectFit: 'scale-down', height: '400px' }} className='scroll-container-img'/>
+                <img src="/images/cats/cat-sleeping-on-a-table.jpg" style={{ objectFit: 'scale-down', height: '400px' }} className='scroll-container-img'/>
+                <img src="/images/cats/man-drinking-coffee-with-cat.jpg" style={{ objectFit: 'scale-down', height: '400px' }} className='scroll-container-img'/>
+                <img src="/images/cats/thunder.jpg" style={{ objectFit: 'scale-down', height: '400px' }} className='scroll-container-img'/>
+                <img src="/images/cats/cat-laying-on-books.jpg" style={{ objectFit: 'scale-down', height: '400px' }} className='scroll-container-img'/>
+                <img src="/images/cats/pexels-samer-daboul-2581153.jpg" style={{ objectFit: 'scale-down', height: '400px' }} className='scroll-container-img'/>
+                <img src="/images/cats/radar2.jpg" style={{ objectFit: 'scale-down', height: '400px' }} className='scroll-container-img'/>
+            </div> */}
 
             <div className='paw-print-divider col-12' >
                 <img src='CatPaw1.svg' alt='A peach colored cat paw, the first in a row.' className='cat-paw-image' loading='lazy' width={100} height={100} />
@@ -32,8 +76,8 @@ const Home = () => {
                 <img src='CatPaw1.svg' alt='A peach colored cat paw, the third in a row.' className='cat-paw-image' id='hide-on-small-screens' loading='lazy' width={100} height={100} />
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'row', backgroundColor: '#FBFCFC', height: '100dvh' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', width: '500px', margin: '0 auto', justifyContent: 'center' }}>
+            <div className='s2'>
+                <div className='s2-r1'>
                     <h6 style={{ fontWeight: '700', textAlign: 'left', color: '#92440d', textTransform: 'uppercase' }}>
                         About
                     </h6>
@@ -49,11 +93,13 @@ const Home = () => {
                         that the cats have here will help them become more used to human interaction.
                         <br />
                         <br />
-                        If you'd like to meet a specific cat, book a reservation for a one hour One-on-One session. Pay at the counter when you enter the lounge
+                        If you'd like to meet a specific cat, book a reservation for a one hour One-on-One session. Pay at the counter when you enter the lounge.
                     </p>
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', width: '500px', margin: '0 auto', justifyContent: 'center' }}>
+
+
+                <div className='s2-r2'>
                     <div style={{ display: 'flex', flexDirection: 'row', marginBottom: '10px' }}>
                         <img src='CatPawNumbered1.svg' alt='A gray cat paw icon, with the number 1 inside' className='cat-paw-bullet' loading='lazy' width={75} height={75}></img>
                         <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '20px' }}>
@@ -138,13 +184,13 @@ const Home = () => {
                 <img src='CatPaw1.svg' alt='A peach colored cat paw, the third in a row.' className='cat-paw-image' id='hide-on-small-screens' loading='lazy' width={100} height={100} />
             </div>
 
-            <div style={{disply: 'flex', flexDirection: 'column', backgroundColor: '#FBFCFC', margin: '0 auto', justifyContent: 'center', padding: '50px 0'}} >
+            <div className='s4' style={{}} >
                 <h6 style={{ fontWeight: '700', textAlign: 'center', color: '#92440d', textTransform: 'uppercase' }}>Our Story</h6>
                 <div className='intro'>
                     <h2 className='heading' id='about-heading' style={{ fontWeight: '700', textAlign: 'center' }}>
                         A purr-fectly delightful experience.
                     </h2>
-                    <p style={{ padding: '0px 100px' }}>
+                    <p>
                         Inspired by the spirit of Japanese cat cafes, Comfy Cat Cafe & Bakery is a testament to our love for cats and baking. We work with local shelters and cat sanctuaries to help give
                         adoptable cats more exposure to humans and help them find their fur-ever homes.
                         <br />
@@ -206,8 +252,8 @@ const Home = () => {
 
             <h6 style={{ fontWeight: '700', textAlign: 'center', color: '#92440d', textTransform: 'uppercase' }}>Spotlight</h6>
             <h2 style={{ textAlign: 'center', fontWeight: 700, marginBottom: '50px' }}>Cat of the Week</h2>
-            <div style={{ display: 'flex', flexDirection: 'row' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', width: '700px', marginLeft: 'auto', justifyContent: 'center' }}>
+            <div className='s5'>
+                <div className='s5-r1' style={{}}>
                     <h3 style={{ fontWeight: 700 }}>Paprika<TbGenderFemale style={{ color: '#91170D' }} /></h3>
                     <h5 style={{ color: '#92440d' }}>4 months old</h5>
                     <p>
@@ -241,24 +287,24 @@ const Home = () => {
             </div>
 
             <div className='section section-6 col-12'>
-                <div className='mission-section'>
-                    <div className='mission-statement-text'>
-                        <div className='home-small-section-heading'>Mission</div>
-                        <h2 className='heading' style={{ fontWeight: '700' }}>
+                <div className='s6'>
+                    <div className='s6-r1'>
+                        <h6 style={{ fontWeight: '700', textAlign: 'center', color: '#92440d', textTransform: 'uppercase' }}>Mission</h6>
+                        <h2 style={{ fontWeight: '700', textAlign: 'center' }}>
                             Our Mission
                         </h2>
-                        <p style={{textAlign: 'left', padding: '0 100px', fontWeight: '400', fontSize: '16px'}}>
-                            Welcome to our one-of-a-kind cat cafe and bakery, a haven of warmth and companionship nestled right here in Atlanta. 
+                        <p style={{}}>
+                            Welcome to our one-of-a-kind cat cafe and bakery, a haven of warmth and companionship nestled right here in Atlanta.
                             <br />
                             <br />
-                            Inspired by the heartwarming concept of Japanese cat cafes, we've blended the coziness of a bakery with the joy of feline friendships to create an unforgettable experience. 
-                            As you relish our freshly baked treats and artisanal beverages, you'll find yourself surrounded by the playful presence of our resident cats, each with a unique tale to tell. 
+                            Inspired by the heartwarming concept of Japanese cat cafes, we've blended the coziness of a bakery with the joy of feline friendships to create an unforgettable experience.
+                            As you relish our freshly baked treats and artisanal beverages, you'll find yourself surrounded by the playful presence of our resident cats, each with a unique tale to tell.
                             Our mission transcends delightful moments – we're dedicated to facilitating loving forever homes for these lovable felines.
                             <br />
                             <br />
-                            At our cat cafe, every sip and bite is an opportunity to make a difference. Through partnerships with local shelters and rescue organizations, we've designed a space where guests 
-                            can connect with these charming creatures, creating a bridge between cat enthusiasts and cats in need of homes. Whether you're here for a soothing escape from the everyday or to 
-                            embark on a heartwarming journey of companionship, our American cat cafe and bakery is where delectable flavors, warm company, and feline adoration intertwine to create a truly 
+                            At our cat cafe, every sip and bite is an opportunity to make a difference. Through partnerships with local shelters and rescue organizations, we've designed a space where guests
+                            can connect with these charming creatures, creating a bridge between cat enthusiasts and cats in need of homes. Whether you're here for a soothing escape from the everyday or to
+                            embark on a heartwarming journey of companionship, our American cat cafe and bakery is where delectable flavors, warm company, and feline adoration intertwine to create a truly
                             magical experience.
 
                             <br />
@@ -271,11 +317,11 @@ const Home = () => {
                             We are committed to raising awareness about animal welfare and supporting local shelters through our adoption programs.
                             <br />
                             <br />
-                            Are you or an organization you know interested leaving a donation? Contact us <a href='/'>@comfycatc&b@mail.com</a> or leave a message
-                            at 478-123-4567.
+                            Are you or an organization you know interested leaving a donation? Contact us at <a href='/'>comfycatcafe&bakery@gmail.com</a> or leave a message
+                            at (404)-202-2668.
                         </p>
                     </div>
-                    <div className='mission-stats' >
+                    <div className='s6-r2'>
                         <div className='mission-stat-row'>
                             <img src='CatPawStat1.svg'
                                 alt='A gray colored cat paw. The sentence "115 adoptions since 2022" is written in the middle'
@@ -300,6 +346,40 @@ const Home = () => {
                 </div>
             </div>
 
+            {/*            <div className='paw-print-divider col-12'>
+                <img src='CatPaw1.svg' className='cat-paw-image' alt='A peach colored cat paw, the first in a row.' loading='lazy' width={100} height={100} />
+                <img src='CatPaw1.svg' className='cat-paw-image' alt='A peach colored cat paw, the second in a row.' id='hide-on-extra-small-screens' loading='lazy' width={100} height={100} />
+                <img src='CatPaw1.svg' className='cat-paw-image' alt='A peach colored cat paw, the third in a row.' id='hide-on-small-screens' loading='lazy' width={100} height={100} />
+            </div> */}
+
+            {/*responsive photo grid */}
+            {/* <h2 style={{fontWeight: '700', textAlign: 'center', marginBottom: '50px'}}>Photo Wall</h2>
+            <div className='row'>
+                <div className='column'>
+                    <img src="/images/cats/perry.jpg" style={{ objectFit: 'scale-down', height: '300px' }} className='scroll-container-img' />
+                    <img src="/images/cats/moon.jpg" style={{ objectFit: 'scale-down', height: '300px' }} className='scroll-container-img' />
+                    <img src="/images/cats/moon3.jpg" style={{ objectFit: 'scale-down', height: '300px' }} className='scroll-container-img' />
+                    <img src="/images/cats/neo2.jpg" style={{ objectFit: 'scale-down', height: '300px' }} className='scroll-container-img' />
+                </div>
+                <div className='column'>
+                    <img src="/images/cats/freddie.jpg" style={{ objectFit: 'scale-down', height: '300px' }} className='scroll-container-img' />
+                    <img src="/images/cats/basil.jpg" style={{ objectFit: 'scale-down', height: '300px' }} className='scroll-container-img' />
+                    <img src="/images/cats/pexels-erik-mclean-4876537.jpg" style={{ objectFit: 'scale-down', height: '300px' }} className='scroll-container-img' />
+                    <img src="/images/cats/pexels-joão-jesus-4198370.jpg" style={{ objectFit: 'scale-down', height: '300px' }} className='scroll-container-img' />
+                </div>
+                <div className='column'>
+                    <img src="/images/cats/thunder2.jpg" style={{ objectFit: 'scale-down', height: '300px' }} className='scroll-container-img' />
+                    <img src="/images/cats/pexels-david-yu-10914515.jpg" style={{ objectFit: 'scale-down', height: '300px' }} className='scroll-container-img' />
+                    <img src="/images/cats/cat-sleeping-on-a-table.jpg" style={{ objectFit: 'scale-down', height: '300px' }} className='scroll-container-img' />
+                    <img src="/images/cats/man-drinking-coffee-with-cat.jpg" style={{ objectFit: 'scale-down', height: '300px' }} className='scroll-container-img' />
+                </div>
+                <div className='column'>
+                    <img src="/images/cats/thunder.jpg" style={{ objectFit: 'scale-down', height: '300px' }} className='scroll-container-img' />
+                    <img src="/images/cats/cat-laying-on-books.jpg" style={{ objectFit: 'scale-down', height: '300px' }} className='scroll-container-img' />
+                    <img src="/images/cats/pexels-samer-daboul-2581153.jpg" style={{ objectFit: 'scale-down', height: '300px' }} className='scroll-container-img' />
+                    <img src="/images/cats/radar2.jpg" style={{ objectFit: 'scale-down', height: '300px' }} className='scroll-container-img' />
+                </div>
+            </div> */}
 
         </div>
     )

@@ -4,7 +4,7 @@ import { CatCardGroupComponent } from '../components/Cards/catCards.js'
 export class Cats extends React.Component {
   render() {
     return (
-      <div id='resident-cats'>
+      <div id='resident-cats' style={{marginTop: '100px'}}>
         <div>
           <div className='small-section-heading' style={{marginTop: '25px', textDecoration: 'underline'}}>
             Lounge

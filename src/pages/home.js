@@ -21,6 +21,14 @@ const Home = () => {
         easing: 'easeInOutSine'
     })
 
+    const bookSession = () => {
+        window.location.href = './resident-cats';
+    }
+
+    const viewMenu = () => {
+        window.location.href = './menu';
+    }
+
     return (
         <div className='home' >
             <div className='s1'>
@@ -30,8 +38,8 @@ const Home = () => {
                         Paw a freshly baked pastry, swipe your freshly brewed coffee from the counter, and pad over to one of our comfy, fluffy couches to
                         join a feline friend.
                     </p>
-                    <button className='home-button' style={{ margin: '10px auto', width: '50%' }}>Book Session</button>
-                    <button className='home-button' style={{ margin: '10px auto', width: '50%' }}>View Menu</button>
+                    <button className='home-button' style={{ margin: '10px auto', width: '50%' }} onClick={() => bookSession()}>Book Session</button>
+                    <button className='home-button' style={{ margin: '10px auto', width: '50%' }} onClick={() => viewMenu()}>View Menu</button>
                 </div>
                 <img src='cat-and-coffee.jpg'
                     alt='A large furry black cat standing on a table with two coffee cups beside it'
@@ -152,7 +160,7 @@ const Home = () => {
                             <p style={{ margin: '20px 0' }}>
                                 Sit back and relax at our in-house cafe. $10 day pass with Wi-Fi included.
                             </p>
-                            <a href='#visit'><button className='home-button' label='Visit Our Cafe'>Visit Our Cafe</button></a>
+                            <a href='#footer'><button className='home-button' label='Visit Our Cafe'>Visit Our Cafe</button></a>
                         </div>
                     </div>
                     <div className='service-card' style={{ backgroundColor: '#FDF8F3', height: 'auto', padding: '20px 10px' }}>

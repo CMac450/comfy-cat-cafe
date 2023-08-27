@@ -8,7 +8,7 @@ export class Footer extends React.Component {
             <div className='col-12 footer'>
                 {/* <Divider /> */}
                 <footer>
-                    <div className='footer-info' > {/*style={{ margin: '0 auto', textAlign: 'center' }} */}
+                    <div id="footer" className='footer-info' > {/*style={{ margin: '0 auto', textAlign: 'center' }} */}
                         <div className='footer-info-section'>
                             <h3>Find us at</h3>
                             <p >
